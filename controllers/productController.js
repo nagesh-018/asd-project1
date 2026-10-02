@@ -1,11 +1,16 @@
 const productService = require('../services/productService');
+const cache = require('../middleware/cacheMiddleware');
 
 async function getProducts(req, res) {
     try {
         const products = await productService.getAllProducts();
 
+        cache.setCache(req.originalUrl, products);
+
         res.json(products);
     } catch (error) {
+        console.error(error);
+
         res.status(500).json({
             error: 'Internal Server Error'
         });
@@ -24,8 +29,12 @@ async function getProductById(req, res) {
             });
         }
 
+        cache.setCache(req.originalUrl, product);
+
         res.json(product);
     } catch (error) {
+        console.error(error);
+
         res.status(500).json({
             error: 'Internal Server Error'
         });
