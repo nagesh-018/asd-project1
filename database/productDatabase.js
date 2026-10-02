@@ -9,6 +9,14 @@ async function getProducts() {
     return JSON.parse(data);
 }
 
+async function saveProducts(products) {
+    await fs.writeFile(
+        pathToFile,
+        JSON.stringify(products, null, 2)
+    );
+}
+
 module.exports = {
-    getProducts
+    getProducts,
+    saveProducts
 };

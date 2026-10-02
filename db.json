@@ -1,10 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Keyboard",
-    "price": 49.99
-  },
-  {
     "id": 3,
     "name": "Monitor",
     "price": 199
@@ -16,6 +11,26 @@
   },
   {
     "id": 5,
+    "name": "Laptop",
+    "price": 999
+  },
+  {
+    "id": 5,
+    "name": "Laptop",
+    "price": 999
+  },
+  {
+    "id": 6,
+    "name": "Laptop",
+    "price": 999
+  },
+  {
+    "id": 7,
+    "name": "Laptop",
+    "price": 999
+  },
+  {
+    "id": 8,
     "name": "Laptop",
     "price": 999
   }
